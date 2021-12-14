@@ -1,0 +1,45 @@
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    background-color: #1B1E24;
+    height: 100vh;
+    visibility: visible;
+}
+
+.content{
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+.custom-navbar{
+    background-color: #15171b;
+    visibility: hidden;
+}
+
+.navbar-toggle{
+    color: white;
+}
+
+@media(max-width: 800px){
+    .custom-navbar{
+        visibility: visible;
+    }
+
+    .sidebar{
+        visibility: hidden;        
+    }
+
+    .content{
+        transform: translateX(-250px);
+    }
+}
+
+@media(min-width: 800px){
+    .sidebar{
+        visibility: visible;
+        background-color: yellowgreen;
+    }
+}
+

@@ -1,0 +1,54 @@
+*{
+    padding: 0%;
+    margin: 0%; 
+}
+/******************************************* STYLES FOR INDEX *******************************************/
+.bg-1{
+    background-image: url('../../assets/images/wallpaperflare.com_wallpaper.jpg');
+    background-size: cover;
+    height: 100vh;
+    padding: 0%;
+    margin: 0%;
+}
+
+.titles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titles .title{
+    color: white;
+    font-size: 5rem;
+}
+
+.titles .subtitle{
+    color: white;
+    font-size: 3rem;
+}
+
+.titles .button-signup{
+    text-decoration: none;
+    color: white;
+    background-color: #FA04B0;
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    margin-top: 0.5rem;
+}
+
+.custom-navbar1{
+    color: white;
+    background-color: black;
+    opacity: 70%;
+    height: 3rem;
+    padding: 0 1.5rem;
+}
+
+.custom-navbar1 .navbar-nav{
+    margin-left: auto;
+}
+
+.custom-navbar1 .nav-link , .custom-navbar1 .navbar-brand{
+    color: white;
+}

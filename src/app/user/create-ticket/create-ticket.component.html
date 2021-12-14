@@ -1,0 +1,48 @@
+<div class="sidebar">
+    <app-sidebar></app-sidebar>
+</div>
+
+<div class="content">
+    <div class="row">
+        <div class="col-4">
+            <h1>Create Ticket</h1>
+        </div>
+        <div class="col-6">
+            <form id="myForm" (ngSubmit)="submit()">
+                <div *ngIf="resultString=='1'" class="alert alert-success">Ticket Added Successfully</div>
+                <div *ngIf="resultString=='0'" class="alert alert-danger">Failed to Add Ticket</div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input [(ngModel)]="ticket.title" type="text" name="subject" id="subject" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="task">Task Type</label>
+                    <select [(ngModel)]="ticket.task" name="task" id="task" class="form-control">
+                        <option value="">Select Task Type</option>
+                        <option value="billing">Billing</option>
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="priority">Priority</label>
+                    <select [(ngModel)]="ticket.prio" name="priority" id="priority" class="form-control">
+                        <option value="">Select Priority</option>
+                        <option value="important">Important</option>
+                        <option value="urgent">Urgent</option>
+                        <option value="non-urgent">Non Urgent</option>
+                        <option value="question">Question</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea [(ngModel)]="ticket.description" name="description" id="description" rows="5" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Submit" class="btn btn-primary col-12">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

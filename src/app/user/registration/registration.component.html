@@ -1,0 +1,47 @@
+<div class="bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <h1 class="title">Sign in to CRM</h1>
+                <a [routerLink]="['/user/login']"><strong>Sign in Now!</strong></a> for a webarch account,It's free and always will be...
+            </div>
+            <div class="col-6">
+                <form #form = "ngForm" (ngSubmit)="submit();">
+                    <div *ngIf="resultString=='0'" class="alert alert-danger">Error Ocurred While Registering, Try Again</div>
+                    <div *ngIf="resultString=='1'" class="alert alert-success">User Registered Correctly</div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input [(ngModel)]="user.name" type="text" name="name" id="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input [(ngModel)]="user.email" type="email" name="email" id="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="form-control" autocomplete="false" [(ngModel)]="user.password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input class="form-control" type="password" name="confirmPassword" id="confirmPassword" autocomplete="false" [(ngModel)]="confirmPassword" (change)="checkPasswords()">
+                    </div>
+                    <small *ngIf="!passwordsMatch" class=" text-danger">Password and Confirm Password Must Match</small>
+                    <div class="form-group">
+                        <label for="contact">Contact</label>
+                        <input [(ngModel)]="user.contact" type="tel" name="contact" id="contact" class="form-control" (change)="checkPasswords()">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label><br>
+                        Male 
+                        <input [(ngModel)]="user.gender" type="radio" name="gender" id="gender1" value="male">
+                        Female 
+                        <input [(ngModel)]="user.gender" type="radio" name="gender" id="gender2" value="female">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Sign Up" class="btn btn-primary col-12">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

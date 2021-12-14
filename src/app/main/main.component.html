@@ -1,0 +1,22 @@
+<div class="bg-1">
+    <nav class="navbar navbar-expand-sm custom-navbar1">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">CRM</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" [routerLink]='["/user/signup"]'>USER SIGN UP</a>
+              <a class="nav-link" [routerLink]="['/user/login']">USER LOG IN</a>
+              <a class="nav-link" [routerLink]="['/admin/login']">ADMIN</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <div class="titles">
+        <h1 class="title">SMALL CRM</h1>
+        <h2 class="subtitle">Developed using PHP & MySQL</h2>
+        <a [routerLink]="['/signup']" class="button-signup">USER SIGNUP</a>
+    </div>
+</div>

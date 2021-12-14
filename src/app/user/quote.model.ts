@@ -1,0 +1,29 @@
+export class Quote{
+public id:number=0;
+public name:string="";
+public email:string="";
+public contact:string="";
+public company:string="";
+public webDesign:number=0;
+public cms:number=0;
+public seo:number=0;
+public smo:number=0;
+public staticWeb:number=0;
+public dynamicWeb:number=0;
+public flashWeb:number=0;
+public domainReg:number=0;
+public webHosting:number=0;
+public webMaintenance:number=0;
+public ecomm:number=0;
+public animation:number=0;
+public payment:number=0;
+public logo:number=0;
+public dashboard:number=0;
+public openSource:number=0;
+public newsLetter:number=0;
+public other:number=0;
+public query:string="";
+public remark:string="";
+public postDate:string="";
+public status:string="";
+}

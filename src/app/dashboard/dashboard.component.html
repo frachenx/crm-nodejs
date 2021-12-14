@@ -1,0 +1,98 @@
+<div class="sidebar">
+    <app-sidebar></app-sidebar>
+</div>
+<div class="navbar custom-navbar">
+    <div class="container-fluid">
+        <button  class="btn navbar-toggle" (click)="openNav()"><i class="fas fa-bars"></i></button>
+    </div>
+</div>
+<div class="content">
+    <div *ngIf="dashboardType=='USER'" class="card-group">
+        <div class="card text-center">
+            <div class="card-header">
+                Tickets
+            </div>
+            <div class="card-body">
+                <i class="fas fa-ticket-alt fa-8x "></i><br>
+                <a [routerLink]="" class="btn btn-primary">View Tickets</a>
+            </div>
+        </div>
+        <div class="card text-center">
+            <div class="card-header">
+                Quotes
+            </div>
+            <div class="card-body">
+                <i class="fas fa-dollar-sign fa-8x"></i><br>
+                <a href="#" class="btn btn-primary">Get Quote</a>
+            </div>
+        </div>
+        <div class="card text-center">
+            <div class="card-header">
+                Profile
+            </div>
+            <div class="card-body">
+                <i class="fas fa-user-circle fa-8x"></i><br>
+                <a href="#" class="btn btn-primary">My Profile</a>
+            </div>
+        </div>
+        <div class="card text-center">
+            <div class="card-header">
+                Create
+            </div>
+            <div class="card-body">
+                <i class="fas fa-plus-circle fa-8x"></i><br>
+                <a href="#" class="btn btn-primary">Create</a>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="dashboardType=='ADMIN'" class="card-group">
+        <div class="card text-center">
+            <div class="card-header">
+                Overal Visitors
+            </div>
+            <div class="card-body">
+                <p class="card-text"><i class="fas fa-eye fa-8x"></i></p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Overall Visitors: {{overallVisitors}}</li>
+                    <li class="list-group-item">Today: {{visitorsToday}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card text-center">
+            <div class="card-header">
+                Registered Users
+            </div>
+            <div class="card-body">
+                <p class="card-text"><i class="fas fa-users fa-8x"></i></p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Registered Users: {{registeredUsers}}</li>
+                    <li class="list-group-item">Today: {{registeredToday}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card text-center">
+            <div class="card-header">
+                <a style="text-decoration: none;" href="manage-quotes.php" class="text-dark">Quote Requests</a>
+            </div>
+            <div class="card-body">
+                <p class="card-text"><i class="fas fa-dollar-sign fa-8x"></i></p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Overall Quotes: {{overallQuotes}}</li>
+                    <li class="list-group-item">In Progress: {{quotesInProgress}}</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card text-center">
+            <div class="card-header">
+                <a style="text-decoration: none;" href="manage-tickets.php" class="text-dark">Overall Tickets</a>
+            </div>
+            <div class="card-body">
+                <p class="card-text"><i class="fas fa-ticket-alt fa-8x"></i></p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">All Tickets: {{overallTickets}}</li>
+                    <li class="list-group-item">Pending Tickets: {{pendingTickets}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+.bg{
+    background: rgb(193,193,193);
+    background: linear-gradient(90deg, rgba(193,193,193,1) 0%, rgba(238,245,255,1) 94%);
+    height: 100vh;
+}
+
+.container{
+    padding-top: 4rem;
+    padding-left: 8rem;
+}
+
+.title{
+    font-size: 2rem;
+}

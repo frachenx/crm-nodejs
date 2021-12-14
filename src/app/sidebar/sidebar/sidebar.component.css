@@ -1,0 +1,46 @@
+.sidebar-brand .brand{
+    color: white;
+}
+
+.sidebar-brand{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 1rem;
+    background-color: #22262E;
+    padding: 1rem 1rem;
+}
+
+.navbar-buttons{
+    display: flex;
+}
+
+.button-brand a, .button-close a{
+    text-decoration: none;
+    color: white;
+    background-color: #0D0F12;
+    padding: .3rem .5rem;
+    margin: 0 .2rem;
+}
+
+.profile{
+    display: flex;
+    padding: 1rem 1rem;
+    align-items: center;
+}
+
+.profile-description{
+    padding-left: 1rem;
+}
+
+.separator{
+    margin: 0.1rem;
+}
+
+.nav-item a{
+    color: white;
+}
+
+.profile-online{
+    color: #8CFF2F;
+}

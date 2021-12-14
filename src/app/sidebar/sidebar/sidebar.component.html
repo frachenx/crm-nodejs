@@ -1,0 +1,73 @@
+<div class="sidebar-brand">
+    <h1 class="brand">CRM <span *ngIf="sidebarItemsType=='ADMIN'">| ADMIN</span></h1>
+    <div class="navbar-buttons">
+        <div *ngIf="sidebarItemsType=='USER'" class="button-brand">
+            <a id="button-brand" href="dashboard.php"><i class="fas fa-home"></i></a>
+        </div>
+        <!-- <div class="button-close">
+            <a id="button-close" href="#" onclick="closeNav()"><i class="fas fa-times"></i></a>
+        </div> -->
+    </div>
+</div>
+<div class="profile text-light">
+    <i *ngIf="sidebarItemsType=='USER'" class="fas fa-user-circle fa-4x profile-logo"></i>
+    <i *ngIf="sidebarItemsType=='ADMIN'" class="fas fa-user-shield fa-4x profile-logo"></i>
+    <div class="profile-description">
+        <p *ngIf="sidebarItemsType=='USER'" class="profile-description-text">Welcome User @User</p>
+        <p *ngIf="sidebarItemsType=='ADMIN'" class="profile-description-text">Welcome Admin</p>
+        <p *ngIf="sidebarItemsType=='USER'" class="profile-online">Online <i class="fas fa-signal"></i></p>
+    </div>
+</div>
+<hr class="separator text-light">
+
+<div [ngSwitch]="sidebarItemsType" class="sidebarItems">
+    <ul *ngSwitchCase="'USER'" class="nav flex-column">
+        <li class="nav-item">
+            <a [routerLink]="['/dashboard']" class="nav-link"><i class="fas fa-home"></i> Dashboard</a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['/user/change-password']" class="nav-link"><i class="fas fa-key"></i> Change Password</a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['/user/profile']" class="nav-link"><i class="fas fa-id-card"></i>
+                Profile</a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['/user/get-quote']" class="nav-link"><i class="fas fa-dollar-sign"></i> Request A Quote</a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['/user/create-ticket']" class="nav-link"><i class="fas fa-ticket-alt"></i> Create Ticket</a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['/user/view-tickets']" class="nav-link"><i class="fas fa-ticket-alt"></i> View Tickets</a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['/logout']" class="nav-link"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+        </li>
+    </ul>
+
+    <ul *ngSwitchCase = "'ADMIN'" class="nav flex-column">
+        <li class="nav-item">
+            <a [routerLink]="['/dashboard']" class="nav-link"><i class="fas fa-home"></i> Dashboard</a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['/admin/change-password']" class="nav-link"><i class="fas fa-key"></i> Change Password</a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['/admin/manage-users']" class="nav-link"><i class="fas fa-users"></i>
+                Users</a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['/admin/manage-tickets']" class="nav-link"><i class="fas fa-ticket-alt"></i> Manage Tickets</a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['/admin/manage-quotes']" class="nav-link"><i class="fas fa-dollar-sign"></i> Manage Quotes</a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['/admin/user-access-logs']" class="nav-link"><i class="fas fa-clipboard-list"></i> User Access Logs</a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="['/logout']" class="nav-link"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+        </li>
+    </ul>
+</div>
